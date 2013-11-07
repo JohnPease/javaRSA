@@ -1,8 +1,14 @@
+/*
+John Pease
+CS469 - RSA.java
+*/
+
 package rsa;
 
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class RSA {
 
@@ -87,9 +93,15 @@ public class RSA {
 		BigInteger b_plainText, b_cipherText;
 		int e_start, e_end, encryptTime, d_start, d_end, decryptTime;
 
-		System.out.println("Enter any character: " );
-		plainText = System.in.read();
-		
+		if (args.length != 0 && args[0].equalsIgnoreCase("n")) {
+			System.out.println("Plaintext chosen for you");
+			plainText = 1325975912;
+		} else {
+			System.out.println("Enter a number (string characters not allowed): " );
+			Scanner StdIn = new Scanner(System.in);
+			plainText = StdIn.nextInt();
+		}
+
 		b_plainText = BigInteger.valueOf(plainText);
 		e_start = (int)System.nanoTime();
 		b_cipherText = rsa.encrypt(b_plainText);
