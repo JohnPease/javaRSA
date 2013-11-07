@@ -54,14 +54,14 @@ public class RSA {
 	}
 
 	public static void main(String[] args) throws IOException {
-        /*
+		/*
 	    Requirements:
 	    - BigInteger and SecureRandom should be used
-        - p and q should be at least 512-bit
-        - difference between p and q should be bigger than 2^256
-        - demonstration of encryption and decryption should be given
-        - should include encryption and decryption timing
-        - public key e is 65537
+      - p and q should be at least 512-bit
+      - difference between p and q should be bigger than 2^256
+      - demonstration of encryption and decryption should be given
+      - should include encryption and decryption timing
+      - public key e is 65537
 		*/
 
 		RSA rsa = new RSA();
